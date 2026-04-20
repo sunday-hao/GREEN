@@ -13,8 +13,6 @@ setup(
         "Operating System :: OS Independent",
     ],
     install_requires=[
-        "torch==2.2.2",
-        "transformers==4.40.0",
         "accelerate==0.30.1",
         "pillow==10.3.0",
         "sentencepiece==0.2.0",
@@ -32,7 +30,6 @@ setup(
         "pytest",
     ],
     # python_requires='>=3.9,<=3.10.13',
-    python_requires="==3.12.1",
     packages=find_packages(),
     zip_safe=False,
 )
