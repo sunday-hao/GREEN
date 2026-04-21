@@ -47,7 +47,7 @@ def tqdm_on_main(*args, **kwargs):
 
 class GREEN:
     def __init__(
-        self, model_name=None, output_dir=".", cpu=False, compute_summary_stats=True
+        self, model_name=None, output_dir=".", cpu=False, batch_size=8, max_length=2048, compute_summary_stats=True
     ):
         super().__init__()
         warnings.filterwarnings(
@@ -55,8 +55,8 @@ class GREEN:
         )
         self.cpu = cpu
         self.output_dir = output_dir
-        self.batch_size = 8
-        self.max_length = 2048
+        self.batch_size = batch_size
+        self.max_length = max_length
         self.categories = [
             "Clinically Significant Errors",
             "Clinically Insignificant Errors",
